@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Senthil Pandi V – Python & Django Developer</title>
+<meta name="description" content="Portfolio of Senthil Pandi V, a software developer skilled in Python, Django, React.js and MySQL, based in Chennai.">
+<meta property="og:title" content="Senthil Pandi V – Python & Django Developer">
+<meta property="og:description" content="Full-stack projects, skills and certifications of a Python Full Stack developer.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1428;--bg2:#0f1d38;--card:#13254a;--line:#24396b;--text:#e8eefc;--mute:#a3b3d6;--acc:#22d3ee;--acc-ink:#04141f;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.2;margin:0}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+section:nth-of-type(even){background:var(--bg2)}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:8px}
+.lead{color:var(--mute);max-width:62ch;margin:0 0 32px}
+header{position:sticky;top:0;z-index:20;background:rgba(10,20,40,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:700 1.1rem Sora,sans-serif;color:var(--text);text-decoration:none}
+.links{display:flex;gap:4px;flex-wrap:wrap}
+.links a{color:var(--mute);text-decoration:none;padding:8px 10px;border-radius:8px;font-size:.95rem}
+.links a:hover{color:var(--text);background:var(--card)}
+#menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 12px;font:inherit;cursor:pointer}
+@media(max-width:860px){#menu{display:block}.links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--bg2);padding:12px 20px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding:80px 0}
+@media(max-width:780px){.hero{grid-template-columns:1fr;padding:48px 0}}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);margin-bottom:12px}
+.hero .role{color:var(--acc);font:500 1.15rem Sora,sans-serif;margin-bottom:16px}
+.hero p{color:var(--mute);max-width:56ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 16px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font:600 1rem "Source Sans 3",sans-serif;text-decoration:none;border:2px solid var(--acc);cursor:pointer;transition:transform .15s,background .15s}
+.btn.p{background:var(--acc);color:var(--acc-ink)}
+.btn.s{background:none;color:var(--acc)}
+.btn:hover{transform:translateY(-2px)}
+.social{display:flex;gap:16px;flex-wrap:wrap;font-weight:600}
+.photo{aspect-ratio:4/5;max-width:340px;width:100%;margin-left:auto;border-radius:20px;border:2px dashed var(--line);background:var(--card);display:grid;place-items:center;text-align:center;color:var(--mute);padding:20px}
+.photo b{display:block;font:700 4rem Sora,sans-serif;color:var(--acc)}
+@media(max-width:780px){.photo{margin:0;max-width:240px}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 6px 18px rgba(0,0,0,.25);transition:border-color .2s}
+.card:hover{border-color:var(--acc)}
+.card h3{font-size:1.1rem;margin-bottom:8px}
+.card p,.card li{color:var(--mute)}
+.card ul{padding-left:18px;margin:8px 0}
+.tag{display:inline-block;font-size:.85rem;padding:2px 10px;margin:0 6px 6px 0;border:1px solid var(--line);border-radius:99px;color:var(--text);background:var(--bg2)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{background:none;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:6px 16px;font:inherit;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--acc);color:var(--acc-ink);border-color:var(--acc);font-weight:600}
+.shot{aspect-ratio:16/9;border:2px dashed var(--line);border-radius:10px;display:grid;place-items:center;color:var(--mute);font-size:.9rem;margin-bottom:14px;background:var(--bg2)}
+.ph{color:#fbbf24;font-style:italic}
+.tl{border-left:2px solid var(--line);margin-left:8px;padding-left:24px}
+.tl .item{position:relative;margin-bottom:28px}
+.tl .item::before{content:"";position:absolute;left:-31px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--acc)}
+.tl h3{font-size:1.1rem}
+.when{color:var(--acc);font-size:.9rem}
+form{display:grid;gap:14px;max-width:560px}
+label{display:grid;gap:6px;font-weight:600}
+input,textarea{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:11px;font:inherit}
+.note{color:var(--mute);font-size:.9rem}
+#status{min-height:1.4em}
+footer{padding:32px 0;border-top:1px solid var(--line);color:var(--mute);text-align:center;font-size:.9rem}
+.resume{max-width:720px}
+@media print{header,section:not(#resume),footer,.noprint{display:none!important}body{background:#fff;color:#000}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#home">Senthil Pandi V</a>
+<button id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+<div class="links" id="links">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#achievements">Certificates</a><a href="#experience">Experience</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+</div></nav></div></header>
+
+<main>
+<section id="home" style="background:var(--bg);padding:0"><div class="wrap hero">
+<div>
+<h1>Senthil Pandi V</h1>
+<div class="role">Python &amp; Django Full Stack Developer</div>
+<p>I build database-backed web applications with Python, Django, React.js and MySQL, from user authentication and messaging to carts and order management. Trained as a Python instructor, I also explain what I build.</p>
+<div class="btns"><a class="btn p" href="#projects">View my projects</a><a class="btn s" href="#resume">View résumé</a></div>
+<div class="social"><a href="https://www.linkedin.com/in/senthil-pandi/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/senthilsp41" target="_blank" rel="noopener">GitHub</a><a href="mailto:pandisenthil17@gmail.com">Email</a></div>
+</div>
+<div class="photo" role="img" aria-label="Profile photo placeholder"><div><b>SP</b>Profile photo to be added<br><span class="note">Set PROFILE.photo in the data block</span></div></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<h2>About me</h2>
+<p class="lead">Computer Science graduate and Python trainer who enjoys turning ideas into working web products.</p>
+<div class="grid">
+<div class="card"><h3>Background</h3><p>B.E. in Computer Science and Engineering from SBM College of Engineering and Technology (2019–2023, CGPA 8.5/10), followed by a Python Full Stack Development course at Besant Technologies, Chennai.</p></div>
+<div class="card"><h3>Career goal</h3><p>To take on a challenging role in a reputable organization, applying technical, security and administration skills while keeping up with emerging IT trends.</p></div>
+<div class="card"><h3>Strengths</h3><ul><li>Backend development with Django and MySQL</li><li>Frontend with HTML, CSS, JavaScript (ES6+) and React.js</li><li>Teaching and writing course material</li></ul></div>
+</div>
+<p class="ph" style="margin-top:20px">Optional: add a personal paragraph about your motivation and learning journey in the ABOUT data block.</p>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Technical skills</h2>
+<p class="lead">Technologies listed in my résumé. Proficiency levels are not shown until you provide them.</p>
+<div class="grid" id="skillGrid"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<p class="lead">Filter by technology. Each card is generated from the PROJECTS list in the data block.</p>
+<div class="filters" id="filters" role="group" aria-label="Filter projects by technology"></div>
+<div class="grid" id="projGrid"></div>
+<p id="empty" class="note" hidden>No projects match this filter. Choose another technology.</p>
+</div></section>
+
+<section id="achievements"><div class="wrap">
+<h2>Achievements and certifications</h2>
+<p class="lead">Certificates from my résumé. Add a scan to each card to enable the larger preview.</p>
+<h3 style="margin-bottom:12px">Certificates</h3>
+<div class="grid" id="certGrid"></div>
+<h3 style="margin:36px 0 12px">Achievements</h3>
+<div class="card"><h3>TCS National Qualifier Test (NQT)</h3><p>Participated in the TCS NQT and scored high across several sections.</p></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience and education</h2>
+<p class="lead">&nbsp;</p>
+<div class="tl">
+<div class="item"><div class="when">06/2024 – 12/2024</div><h3>Python Trainer, CSC Computer Education, Anna Nagar</h3><p class="note" style="font-size:1rem">Ran training sessions on Python fundamentals and real-world applications. Developed course materials and guided students through coding projects and best practices.</p></div>
+<div class="item"><div class="when">Course</div><h3>Python Full Stack Development, Besant Technologies, Chennai</h3><p class="note" style="font-size:1rem">Completed a course covering front-end and back-end technologies.</p></div>
+<div class="item"><div class="when">2019 – 2023</div><h3>B.E. Computer Science and Engineering, SBM College of Engineering and Technology</h3><p class="note" style="font-size:1rem">Dindigul. CGPA 8.5 / 10.</p></div>
+<div class="item"><div class="when">2018 – 2019</div><h3>HSC, Government Higher Secondary School</h3><p class="note" style="font-size:1rem">Dindigul. 58%.</p></div>
+<div class="item"><div class="when">2016 – 2017</div><h3>SSLC, Government Higher Secondary School</h3><p class="note" style="font-size:1rem">Dindigul. 77%.</p></div>
+</div></div></section>
+
+<section id="resume"><div class="wrap resume">
+<h2>Résumé</h2>
+<p class="lead noprint">Use the button to print or save this summary as a PDF. To offer your original PDF, host it beside the site and link to it (see notes below).</p>
+<div class="card">
+<h3>Senthil Pandi V, Software Developer</h3>
+<p>Anna Nagar, Chennai · pandisenthil17@gmail.com · 9363342646 / 8056350996</p>
+<p><b>Skills:</b> Python, Core Java, JavaScript, HTML, CSS, React.js, Django, MySQL, Git &amp; GitHub, VS Code, Postman</p>
+<p><b>Experience:</b> Python Trainer, CSC Computer Education (06/2024 – 12/2024)</p>
+<p><b>Education:</b> B.E. CSE, SBM College of Engineering and Technology (2019 – 2023), CGPA 8.5</p>
+<p><b>Projects:</b> VIP Job Seekers World; Ecommerce Platform</p>
+</div>
+<div class="btns noprint"><button class="btn p" id="printBtn">Print or save as PDF</button></div>
+<p class="note noprint">Last updated: <span class="ph">add date</span></p>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Contact</h2>
+<p class="lead">Email is the fastest way to reach me.</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px">
+<div>
+<p><b>Email:</b> <a href="mailto:pandisenthil17@gmail.com">pandisenthil17@gmail.com</a></p>
+<p><b>Phone:</b> 9363342646 / 8056350996</p>
+<p><b>Location:</b> Anna Nagar, Chennai</p>
+<p><a href="https://www.linkedin.com/in/senthil-pandi/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/senthilsp41" target="_blank" rel="noopener">GitHub</a> · <a href="https://senthilsp41.github.io/Portfolio/" target="_blank" rel="noopener">Existing portfolio</a></p>
+</div>
+<div>
+<form id="cform" novalidate>
+<label>Name<input id="n" required autocomplete="name"></label>
+<label>Email<input id="e" type="email" required autocomplete="email"></label>
+<label>Subject<input id="s" required></label>
+<label>Message<textarea id="m" rows="5" required></textarea></label>
+<button class="btn p" type="submit">Open in my email app</button>
+<div id="status" role="status" aria-live="polite"></div>
+<p class="note">This page has no mail server yet, so the form drafts the message in your email app instead of sending it. Connect a form service (see notes) to send directly.</p>
+</form>
+</div></div>
+</div></section>
+</main>
+<footer><div class="wrap">© <span id="yr"></span> Senthil Pandi V. Built with HTML, CSS and JavaScript.</div></footer>
+
+<script>
+/* ===== DATA BLOCK: edit content here ===== */
+const SKILLS={
+"Programming languages":["Python","Core Java","JavaScript"],
+"Frontend":["HTML","CSS","JavaScript (ES6+)","React.js"],
+"Backend":["Python","Django"],
+"Databases":["MySQL"],
+"Version control":["Git","GitHub"],
+"Tools and platforms":["Visual Studio Code","Postman"]};
+const PROJECTS=[
+{title:"VIP Job Seekers World",tech:["Python","Django","HTML","CSS","JavaScript","MySQL"],filter:["Django","MySQL","JavaScript"],
+desc:"A community-driven job portal where job seekers share opportunities and connect with recruiters.",
+problem:"Job seekers need one place to share openings and reach recruiters.",
+solution:"A Django portal with real-time user communication, automated email notifications and an intuitive UI.",
+features:["User authentication","Job creation","Inbox messaging","Job filtering","Dashboard management"],
+repo:"https://github.com/senthilsp41/vipjobseekersworld"},
+{title:"Ecommerce Platform",tech:["Django","MySQL","HTML","CSS","Bootstrap","JavaScript"],filter:["Django","MySQL","JavaScript"],
+desc:"A dynamic ecommerce platform with a full shopping flow.",
+problem:"",solution:"Optimised database queries and API responses to improve backend performance.",
+features:["User authentication","Product catalogue","Shopping cart","Order management"],
+repo:"https://github.com/senthilsp41/Ecommerce_Website"},
+{title:"To-Do List App",tech:["React.js","Bootstrap"],filter:["React.js"],desc:"A task list app built with React.js and Bootstrap.",features:[],repo:""},
+{title:"Personal Portfolio",tech:["HTML","CSS","JavaScript"],filter:["JavaScript"],desc:"An earlier portfolio site built with HTML, CSS and JavaScript.",features:[],repo:"",demo:"https://senthilsp41.github.io/Portfolio/"}];
+const CERTS=[["Python","Guvi Institute"],["Python","HackerRank Coding Challenges"],["JavaScript","HackerRank Coding Challenges"],["CSS","HackerRank Coding Challenges"],["JavaScript","Udemy"],["ReactJS","Udemy"],["ReactJS Master Class","Pantech Elearning"]];
+/* ===== END DATA BLOCK ===== */
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+$("yr").textContent=new Date().getFullYear();
+
+// menu
+$("menu").onclick=()=>{const o=$("links").classList.toggle("open");$("menu").setAttribute("aria-expanded",o)};
+$("links").addEventListener("click",e=>{if(e.target.tagName==="A"){$("links").classList.remove("open");$("menu").setAttribute("aria-expanded",false)}});
+
+// skills
+$("skillGrid").innerHTML=Object.entries(SKILLS).map(([k,v])=>`<div class="card"><h3>${esc(k)}</h3>${v.map(s=>`<span class="tag">${esc(s)}</span>`).join("")}</div>`).join("");
+
+// projects
+const techs=["All",...new Set(PROJECTS.flatMap(p=>p.filter))];
+let cur="All";
+function drawProjects(){
+ $("filters").innerHTML=techs.map(t=>`<button aria-pressed="${t===cur}" data-t="${esc(t)}">${esc(t)}</button>`).join("");
+ const list=PROJECTS.filter(p=>cur==="All"||p.filter.includes(cur));
+ $("empty").hidden=list.length>0;
+ $("projGrid").innerHTML=list.map(p=>`<article class="card">
+  <div class="shot">Screenshot to be added</div>
+  <h3>${esc(p.title)}</h3><p>${esc(p.desc)}</p>
+  ${p.problem?`<p><b>Problem:</b> ${esc(p.problem)}</p>`:""}
+  ${p.solution?`<p><b>Solution:</b> ${esc(p.solution)}</p>`:""}
+  ${p.features.length?`<ul>${p.features.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>`:""}
+  <p class="ph">My contribution: add details</p>
+  <div>${p.tech.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+  <div class="social" style="margin-top:10px">${p.repo?`<a href="${p.repo}" target="_blank" rel="noopener">GitHub repository</a>`:`<span class="ph">Repository link to be added</span>`}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">Live demo</a>`:""}</div>
+ </article>`).join("");
+}
+$("filters").addEventListener("click",e=>{const t=e.target.dataset.t;if(t){cur=t;drawProjects()}});
+drawProjects();
+
+// certificates
+$("certGrid").innerHTML=CERTS.map(([t,o])=>`<div class="card"><div class="shot">Certificate image to be added</div><h3>${esc(t)}</h3><p>${esc(o)}</p><p class="ph">Date and verification link: add if available</p></div>`).join("");
+
+// resume print
+$("printBtn").onclick=()=>window.print();
+
+// contact: honest mailto draft, no fake success
+$("cform").addEventListener("submit",e=>{
+ e.preventDefault();
+ const n=$("n").value.trim(),em=$("e").value.trim(),s=$("s").value.trim(),m=$("m").value.trim(),st=$("status");
+ if(!n||!s||!m||!/^\S+@\S+\.\S+$/.test(em)){st.style.color="#fca5a5";st.textContent="Fill in every field and use a valid email address.";return}
+ const body=encodeURIComponent(`${m}\n\nFrom: ${n} (${em})`);
+ st.style.color="var(--mute)";st.textContent="Your email app should open with a draft. Press send there to deliver it.";
+ location.href=`mailto:pandisenthil17@gmail.com?subject=${encodeURIComponent(s)}&body=${body}`;
+});
+</script>
+</body>
+</html>
